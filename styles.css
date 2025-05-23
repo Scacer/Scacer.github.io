@@ -1,5 +1,56 @@
+body {
+    margin: 0px;
+}
+
+.bgImage {
+    background-image: url("resources/indexImage.png");
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgImageText {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
 #navBar {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+#navBar a {
     display: inline;
     width: 10%;
-    height: 200px;
+    height: 100%;
+    color: black;
+    margin: 20px;
+    text-align: center;
+    padding: 0;
 }
+
+#navBar a:hover{
+    background:plum;
+    color: white;
+}
+
