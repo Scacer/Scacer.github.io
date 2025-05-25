@@ -1,56 +1,95 @@
-body {
-    margin: 0px;
+html, body {
+    margin:0;
+    padding:0;
 }
 
-.bgImage {
-    background-image: url("resources/indexImage.png");
+.article {
+    width:99%;
+    height:200px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: whitesmoke;
+    border: solid;
+    border-radius:20px;
+}
+.banner-card {
+    position: relative;
+    margin:auto;
+    padding:0;
+    z-index: -1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.banner-card img{
+    width: 99%;
+    height:200px;
+    object-fit: none;
     filter: blur(8px);
-    -webkit-filter: blur(8px);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.bgImageText {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
+.banner-text {
+    position: absolute;
+    top: 25%;
+    width:100%;
+    color: white;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-#navBar {
+.banner-text h4{
+    font-size: 18px;
+}
+
+.index-body {
+    --s: 120px; /* control the size */
+  
+    background:
+        conic-gradient(from 150deg at 50% 33%,#0000,#FA6900 .5deg 60deg,#0000 60.5deg) 
+            calc(var(--s)/2) calc(var(--s)/1.4),
+        conic-gradient(from -30deg at 50% 66%,#0000,#D95B43 .5deg 60deg,#ECD078 60.5deg);
+    background-size: var(--s) calc(var(--s)/1.154);
+}
+
+.nav-bar {
     height: 5%;
-    width: 100%;
+    width: 99%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:whitesmoke;
-    margin: 0;
-    padding: 0;
+    background: conic-gradient(#000 90deg,#fff 0 180deg,#000 0 270deg,#fff 0);
+    background-size: 75px;
+    margin: auto;
+    border-bottom: solid;
+    border-radius: 60px;
+    z-index: 1;
 }
 
-#navBar a {
-    display: inline;
-    width: 10%;
+.nav-bar a {
+    display: inline-block;
+    width: 8%;
     height: 100%;
-    color: black;
-    margin: 20px;
+    color:greenyellow;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 1%;
     text-align: center;
+    font-size:18px;
     padding: 0;
+    background: conic-gradient(#86156e 90deg,#fff 0 180deg,#86156e 0 270deg,#fff 0);
+    background-size: 35px;
+    border: none;
+    border-radius:60px;
+    box-shadow: 0px 10px 10px #86156e;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-#navBar a:hover{
-    background:plum;
-    color: white;
+.nav-bar a:hover{
+    background: conic-gradient(#09e609 90deg,#fff 0 180deg,#09e609 0 270deg,#fff 0);
+    box-shadow: 0px 10px 10px #09e609;
+    background-size: 35px;
+    color: blue;
 }
-
